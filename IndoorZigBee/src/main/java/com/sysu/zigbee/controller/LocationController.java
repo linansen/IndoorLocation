@@ -22,6 +22,7 @@ public class LocationController {
 
 	@RequestMapping("/location")
 	@ResponseBody
+	@CrossOrigin(origins = "*")
 	public List<LocationData> locating() {
         List<LocationData> locationDatas=locationService.decodeWaveFile();
 		return locationDatas;
